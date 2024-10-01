@@ -1,0 +1,203 @@
+﻿@page "/volunteer"
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Management System</title>
+    <style>
+        /* Add some basic styling to make the page look decent */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #3e8e41;
+            }
+        /* Add styling to space out table headings */
+        table {
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        table {
+            width: 100%; /* make tables take up full width of their parent container */
+        }
+    </style>
+</head>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Task ID</th>
+                <th>Task Name</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Assign To</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Event Setup</td>
+                <td>Set up chairs and tables for the event</td>
+                <td>2023-03-15</td>
+                <td>Open</td>
+                <td>-</td>
+                <td><button>Assign</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Food Preparation</td>
+                <td>Prepare food for the event</td>
+                <td>2023-03-16</td>
+                <td>Open</td>
+                <td>-</td>
+                <td><button>Assign</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Registration Desk</td>
+                <td>Manage registration desk for the event</td>
+                <td>2023-03-17</td>
+                <td>Open</td>
+                <td>-</td>
+                <td><button>Assign</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Photography</td>
+                <td>Take photos during the event</td>
+                <td>2023-03-18</td>
+                <td>Open</td>
+                <td>-</td>
+                <td><button>Assign</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>Volunteer ID</th>
+                <th>Volunteer Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Availability</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>johndoe@example.com</td>
+                <td>123-456-7890</td>
+                <td>Available</td>
+                <td><button>Select</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>janesmith@example.com</td>
+                <td>098-765-4321</td>
+                <td>Available</td>
+                <td><button>Select</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Bob Johnson</td>
+                <td>bobjohnson@example.com</td>
+                <td>555-123-4567</td>
+                <td>Available</td>
+                <td><button>Select</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Alice Brown</td>
+                <td>alicebrown@example.com</td>
+                <td>789-012-3456</td>
+                <td>Available</td>
+                <td><button>Select</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Add Task</h2>
+    <form>
+        <div class="form-group">
+            <label class="label" for="task-name">Task Name:</label>
+            <input type="text" id="task-name" class="input-field" required>
+        </div>
+        <div class="form-group">
+            <label class="label" for="task-description">Task Description:</label>
+            <textarea id="task-description" class="input-field" required></textarea>
+        </div>
+        <div class="form-group">
+            <label class="label" for="task-due-date">Due Date:</label>
+            <input type="date" id="task-due-date" class="input-field" required>
+        </div>
+        <button class="button" type="submit">Add Task</button>
+    </form>
+    <br/>
+    <h2>Add Volunteer</h2>
+    <form>
+        <div class="form-group">
+            <label class="label" for="volunteer-name">Volunteer Name:</label>
+            <input type="text" id="volunteer-name" class="input-field" required>
+        </div>
+        <div class="form-group">
+            <label class="label" for="volunteer-email">Volunteer Email:</label>
+            <input type="email" id="volunteer-email" class="input-field" required>
+        </div>
+        <div class="form-group">
+            <label class="label" for="volunteer-phone-number">Volunteer Phone Number:</label>
+            <input type="tel" id="volunteer-phone-number" class="input-field" required>
+        </div>
+        <button class="button" type="submit">Add Volunteer</button>
+    </form>
+</div>
+</html>

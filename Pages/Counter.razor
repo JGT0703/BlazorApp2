@@ -1,0 +1,74 @@
+﻿@page "/counter"
+
+<head>
+  <title>Natural Disaster Report Form</title>
+  <style>
+    /* Add some basic styling to make the form look decent */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <h1>Natural Disaster Report Form</h1>
+  <form id="report-form">
+    <label for="type">Type of Disaster:</label>
+    <select id="type" name="type">
+      <option value="">Select a disaster type</option>
+      <option value="earthquake">Earthquake</option>
+      <option value="hurricane">Hurricane</option>
+      <option value="flood">Flood</option>
+      <!-- Add more options as needed -->
+    </select>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" placeholder="Latitude and Longitude (e.g. 37.7749, -122.4194)">
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time">
+
+    <label for="description">Description of the Event:</label>
+    <textarea id="description" name="description" placeholder="Please describe the event in detail"></textarea>
+
+    <label for="reporter-name">Reporter's Name:</label>
+    <input type="text" id="reporter-name" name="reporter-name">
+
+    <label for="reporter-email">Reporter's Email:</label>
+    <input type="email" id="reporter-email" name="reporter-email">
+
+    <input type="submit" value="Submit Report">
+  </form>
+  </body>
+  <head/>

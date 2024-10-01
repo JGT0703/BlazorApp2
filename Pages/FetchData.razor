@@ -1,0 +1,102 @@
+﻿@page "/fetchdata"
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donation Management</title>
+	<style>
+		/* Add some basic styling to make the page look decent */
+		body {
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			width: 80%;
+			margin: 40px auto;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		.label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.input-field {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+		}
+		.button {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.button:hover {
+			background-color: #3e8e41;
+		}
+		/* Add styling to space out table headings */
+		table {
+			border-collapse: separate;
+			border-spacing: 0 10px;
+		}
+
+		th {
+			background-color: #f0f0f0;
+			padding: 10px;
+			text-align: left;
+		}
+
+		td {
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Donation Management</h1>
+		<form>
+			<div class="form-group">
+				<label class="label" for="donor-name">Donor Name:</label>
+				<input type="text" id="donor-name" class="input-field">
+			</div>
+			<div class="form-group">
+				<label class="label" for="donation-amount">Donation Amount:</label>
+				<input type="number" id="donation-amount" class="input-field">
+			</div>
+			<div class="form-group">
+				<label class="label" for="donation-date">Donation Date:</label>
+				<input type="date" id="donation-date" class="input-field">
+			</div>
+			<div class="form-group">
+				<label class="label" for="donation-method">Donation Method:</label>
+				<select id="donation-method" class="input-field">
+					<option value="food">Food</option>
+					<option value="clothes">Clothes</option>
+					<option value="medical supplies">Medical Supplies</option>
+				</select>
+			</div>
+			<button class="button">Submit Donation</button>
+		</form>
+		<h2>Donation History</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Donor Name</th>
+					<th>Donation Amount</th>
+					<th>Donation Date</th>
+					<th>Donation Method</th>
+				</tr>
+			</thead>
+			<tbody id="donation-history">
+				<!-- This will be populated with JavaScript -->
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
